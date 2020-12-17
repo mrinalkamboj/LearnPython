@@ -9,10 +9,10 @@ class IncrementDecrementTests(unittest.TestCase):
     def test_decrement(self):
         self.assertEqual(inc_dec.decrement(3), 2)
     
-    def test_always_fail(self):
+    def test_always_pass(self):
         self.assertEqual(1, 1)
     
-    def test_always_pass(self):
+    def test_always_pass_1(self):
         self.assertEqual(12, 12)
     
     def test_always_fails_1(self):
