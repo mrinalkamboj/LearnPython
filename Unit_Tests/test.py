@@ -1,9 +1,8 @@
 import unittest
 
 import inc_dec    # The code to test
-import unittest   # The test framework
 
-class Test_TestIncrementDecrement(unittest.TestCase):
+class IncrementDecrementTests(unittest.TestCase):
     def test_increment(self):
         self.assertEqual(inc_dec.increment(3), 4)
 
@@ -11,10 +10,13 @@ class Test_TestIncrementDecrement(unittest.TestCase):
         self.assertEqual(inc_dec.decrement(3), 2)
     
     def test_always_fail(self):
-        self.assertEqual(1, 2)
+        self.assertEqual(1, 1)
     
     def test_always_pass(self):
         self.assertEqual(12, 12)
+    
+    def test_always_fails_1(self):
+        self.assertEqual(21, 12)
         
 
 if __name__ == '__main__':

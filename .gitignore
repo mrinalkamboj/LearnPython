@@ -1,3 +1,4 @@
-localtest
 .vscode
-Learn.code-workspace
+*pycache*
+*py(c)*
+*Coding-Test*
