@@ -24,12 +24,12 @@ async def task2(msg, t):
     
     # Create Thread Pool Executor
     with ThreadPoolExecutor() as executor:
-        # # Non Blocking run using Custom thread pool
-        future = loop.run_in_executor(executor, blocking, msg,t)
-        await future
-        # # Blocking Run ( will block main event loop and will not allow other async methods to run)
-        # future = executor.submit(blocking, msg, t)
-        # future.result()
+        # # # # Non Blocking run using Custom thread pool
+        # # future = loop.run_in_executor(executor, blocking, msg,t)
+        # # await future
+        # Blocking Run ( will block main event loop and will not allow other async methods to run)
+        future = executor.submit(blocking, msg, t)
+        future.result()
 
 
 async def main():
